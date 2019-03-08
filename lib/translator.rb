@@ -7,7 +7,7 @@ def load_library(list_of_emoticons)
   
   emoticons.each do |meaning, emoticon_array|
     if !library["get_meaning"]
-      library["get_meaning"] = {emoticon_array
+      library["get_meaning"] = {emoticon_array[1] =>
 end
 
 def get_japanese_emoticon
