@@ -17,7 +17,7 @@ def load_library(list_of_emoticons)
     if !library["get_emoticon"]
       library["get_emoticon"] = {emoticon_array1[0] => emoticon_array1[1]}
     else
-      library["get_emoticon"].merge!({emoticon_array[0] => emoticon_array[1]}) 
+      library["get_emoticon"].merge!({emoticon_array1[0] => emoticon_array1[1]}) 
     end
   end
   library
