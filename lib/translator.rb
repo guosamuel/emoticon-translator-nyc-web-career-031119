@@ -37,5 +37,10 @@ end
 def get_english_meaning(emoticon_path1, emoticon1)
   emoticon_library1 = load_libray(emoticon_path1)
   
-  
+  emoticon_library1["get_meaning"].each do |japanese1, meaning1|
+    if japanese1 == emoticon1
+      return meaning1
+    end
+  end
+  return "Sorry, that emoticon was not found"
 end
