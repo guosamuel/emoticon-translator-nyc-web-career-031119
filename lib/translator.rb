@@ -8,8 +8,12 @@ def load_library(list_of_emoticons)
   emoticons.each do |meaning, emoticon_array|
     if !library["get_meaning"]
       library["get_meaning"] = {emoticon_array[1] => meaning}
-    elsif library["get_meaning"]
+    else
       library["get_meaning"].merge!({emoticon_array[1] => meaning})
+    end
+  end
+  
+  
     elsif !library["get_emoticon"]
       library["get_emoticon"] = {emoticon_array[0] => emoticon_array[1]}
     elsif library["get_emoticon"]
