@@ -13,10 +13,10 @@ def load_library(list_of_emoticons)
     end
   end
   
-  
-    elsif !library["get_emoticon"]
-      library["get_emoticon"] = {emoticon_array[0] => emoticon_array[1]}
-    elsif library["get_emoticon"]
+  emoticons.each do |meaning1, emoticon_array1|  
+    if !library["get_emoticon"]
+      library["get_emoticon"] = {emoticon_array1[0] => emoticon_array1[1]}
+    else
       library["get_emoticon"].merge!({emoticon_array[0] => emoticon_array[1]}) 
     end
   end
